@@ -1,0 +1,29 @@
+.label {
+  display: block;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0 0 10px;
+
+  &--desktop {
+    margin: 0 0 21px;
+  }
+
+  @include desktop {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    font-size: 22px;
+    line-height: 30px;
+
+    &--desktop {
+      position: static;
+      width: auto;
+      height: auto;
+      clip: auto;
+      margin: 0 0 25px;
+    }
+  }
+}

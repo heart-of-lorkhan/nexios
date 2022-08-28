@@ -1,0 +1,185 @@
+.card-link-wrap {
+  display: flex;
+  flex-direction: column;
+
+  @include laptop {
+    flex-direction: row;
+    margin-left: -43px;
+    margin-right: -43px;
+  }
+}
+
+.card-link {
+  align-items: center;
+  background-color: $color-white;
+  border-radius: 5px;
+  box-shadow: 0px 0 20px #dddddd4d;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  height: 82px;
+  margin-bottom: 30px;
+  padding: 17px 78px 16px 40px;
+  text-decoration: none;
+  transition-duration: $transition-duration;
+  transition-property: all;
+
+  @include laptop {
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0;
+    height: 202px;
+    padding: 62px 20px;
+  }
+
+  @include desktop {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  &:hover {
+    background: linear-gradient(0deg, rgb(40, 40, 40), rgb(0, 81, 103));
+    box-shadow: 0 0 20px #00516766;
+    color: $color-white;
+    transition-duration: $transition-duration;
+    transition-property: all;
+
+    p {
+      color: $color-white;
+
+      @include laptop {
+        transform: translateY(5px);
+        color: $color-white;
+        transition-duration: $transition-duration * 2;
+        transition-property: transform, color;
+      }
+    }
+
+    svg {
+      color: $color-white;
+
+      @include laptop {
+        transform: translateY(-5px);
+        transition-duration: $transition-duration * 2;
+        transition-property: transform, color;
+      }
+    }
+  }
+}
+
+.card-link-item {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include laptop {
+    padding-left: 43px;
+    padding-right: 43px;
+    margin: 0;
+  }
+}
+
+.card-link p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  transition-duration: $transition-duration;
+  transition-property: transform, color;
+
+  @include laptop {
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+  }
+}
+.card-link-s p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  @include laptop {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  @include desktop {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.card-link-wrap .card-link svg {
+  margin-right: 25px;
+  width: 40px;
+  transition-duration: $transition-duration;
+  transition-property: transform, color;
+
+  @include laptop {
+    margin-right: 0;
+    width: 47px;
+  }
+}
+
+.card-link-sm svg {
+  @include laptop {
+    margin-right: 30px;
+    width: 35px;
+  }
+}
+
+.card-link-sm {
+  align-items: center;
+  background-color: $color-white;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 0px #a9a3af;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  min-height: 82px;
+  margin-bottom: 30px;
+  padding: 17px 78px 16px 40px;
+  text-decoration: none;
+  font-weight: 600;
+
+  &--light {
+    box-shadow: 0px 0 10px #dddddd4d;
+  }
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 0;
+    padding: 30px;
+    min-width: 300px;
+  }
+
+  @include desktop {
+    min-width: 400px;
+  }
+
+  &:hover {
+    background: linear-gradient(0deg, rgb(40, 40, 40), rgb(0, 81, 103));
+    color: $color-white;
+    transition-duration: $transition-duration;
+    transition-property: all;
+
+    p {
+      color: $color-white;
+      transition-duration: $transition-duration * 2;
+      transition-property: color;
+    }
+
+    svg {
+      color: $color-white;
+      transition-duration: $transition-duration * 2;
+      transition-property: color;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  svg {
+    width: 34px;
+    margin-right: 30px;
+  }
+}

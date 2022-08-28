@@ -1,0 +1,53 @@
+-
+  var data = [
+    {
+      image: "images/crm.jpg",
+      title:  'Kansen in zakelijke fondsenwerving',
+      text: 'Alle gegevens van je zakelijke partners bij de hand én up to date.'
+    },
+    {
+      image: "images/crm.jpg",
+      title:  'Nieuwe rekening, vertrouwde service',
+      text: 'De meeste vaste giftgevers doneren via automatische incasso. Fijn natuurlijk! Maar wat als een giftgever verandert van bankrekeningnummer? De meeste vaste giftgevers doneren via automatische incasso. Fijn natuurlijk! Maar wat als een giftgever verandert van bankrekeningnummer?'
+    },
+    {
+      image: "images/crm.jpg",
+      title:  'Kansen in zakelijke fondsenwerving',
+      text: 'Alle gegevens van je zakelijke partners bij de hand én up to date.'
+    },
+    {
+      image: "images/crm.jpg",
+      title:  'Nieuwe rekening, vertrouwde service',
+      text: 'De meeste vaste giftgevers doneren via automatische incasso. Fijn natuurlijk! Maar wat als een giftgever verandert van bankrekeningnummer?'
+    },
+    {
+      image: "images/crm.jpg",
+      title:  'Kansen in zakelijke fondsenwerving',
+      text: 'Alle gegevens van je zakelijke partners bij de hand én up to date.'
+    },
+      {
+      image: "images/crm.jpg",
+      title:  'Nieuwe rekening, vertrouwde service',
+      text: 'De meeste vaste giftgevers doneren via automatische incasso. Fijn natuurlijk! Maar wat als een giftgever verandert van bankrekeningnummer?'
+    },
+    {
+      image: "images/crm.jpg",
+      title:  'Kansen in zakelijke fondsenwerving',
+      text: 'Alle gegevens van je zakelijke partners bij de hand én up to date.'
+    },
+    {
+      image: "images/crm.jpg",
+      title:  'Nieuwe rekening, vertrouwde service',
+      text: 'De meeste vaste giftgevers doneren via automatische incasso. Fijn natuurlijk! Maar wat als een giftgever verandert van bankrekeningnummer?'
+    },
+    {
+      image: "images/crm.jpg",
+      title:  'Kansen in zakelijke fondsenwerving',
+      text: 'Alle gegevens van je zakelijke partners bij de hand én up to date.'
+    }
+  ]
+
+.post-list.row
+  each item in data
+    .post-list__item.col-sm-6.col-md-4
+      +post-item(item.image, item.title, item.text)

@@ -1,0 +1,57 @@
+.blog-header {
+  display: flex;
+  align-items: flex-end;
+  min-height: 483px;
+  padding-bottom: 50px;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  @include laptop {
+    min-height: 434px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+    color: $color-white;
+
+    @include laptop {
+      margin-bottom: 0;
+    }
+  }
+
+  h5 {
+    font-size: 18px;
+
+    @include desktop {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $color-white;
+
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+}
+
+.blog-header__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+
+  @include laptop {
+    text-align: right;
+  }
+}

@@ -1,0 +1,15 @@
+extends pug/base
+
+prepend vars
+  - title = 'Blogs'
+
+append vars
+  //-
+  
+block content
+  section.section-header-blogs.background-muted
+    .container
+      h1 Blogs. Om te lezen.
+  section.section-blogs
+    .container
+      include pug/components/post-list

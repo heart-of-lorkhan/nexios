@@ -1,0 +1,72 @@
+extends pug/base
+
+prepend vars
+  - title = 'Online fondsenwerving'
+
+append vars
+  //-
+  
+block content
+  section.section-intro.section-intro--gradient
+    .section__container(style="background-image: url(/images/pexels-canva-studio.jpg)")
+      .section__text
+        h2.h2 Online fondsenwerving
+        .section__text-wrap
+          p Jij wilt soepele operationele processen en inzichtelijke data, waardoor je meer inkomsten kunt werven. En dat is precies waar de CRM software van Nexios in voorziet. Met elke maand <span>nieuwe innovaties</span>, een grote <span>gebruiksvriendelijkheid</span> en <span>snelheid</span> is het CRM van Nexios gemáákt voor de ambitieuze fondsenwerver.
+  section.section.section-job(style="background-image: url(/images/wave-blue.svg);")
+    .container
+      .row
+        .col-md-6.col-lg-6
+          +product-slider
+        .col-md-5.col-lg-5.offset-md-1
+          h2.h2
+            | Alleskunner in jouw vakgebied
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna venenatis diam porta, vitae feugiat arcu consectetur. Fusce tincidunt semper hendrerit. Nam hendrerit est at tristique dapibus. Curabitur vitae nulla vulputate, molestie lacus vitae, pellentesque lacus.
+          ul.unordered-list
+            li CRM, formulieren en marketing automation in één
+            li Selectietool voor direct mails en telemarketing
+            li Online leads en donaties
+            li E-mail editor en verzending
+            li 360-graden klantbeeld
+    .section-links 
+      .container
+        h3 Ik ben werkzaam in een ander vakgebied, namelijk:
+        .card-link-wrap 
+          .card-link-item
+            a(href="#").card-link-sm
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="55" viewBox="0 0 48 55">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_594" data-name="Rectangle 594" width="48" height="55" transform="translate(0.125)" fill="none"/>
+                  </clipPath>
+                </defs>
+                <g id="Group_1315" data-name="Group 1315" transform="translate(-0.125)">
+                  <g id="Group_1314" data-name="Group 1314" clip-path="url(#clip-path)">
+                    <path id="Path_301" data-name="Path 301" d="M41.25,17.188A17.188,17.188,0,1,0,12.891,30.25,24.041,24.041,0,0,0,0,51.563a3.438,3.438,0,0,0,6.875,0,17.188,17.188,0,0,1,34.375,0,3.438,3.438,0,0,0,6.875,0A24.045,24.045,0,0,0,35.234,30.25,17.149,17.149,0,0,0,41.25,17.188ZM24.063,27.5A10.313,10.313,0,1,1,34.375,17.188,10.312,10.312,0,0,1,24.063,27.5" fill-rule="evenodd"/>
+                  </g>
+                </g>
+              </svg>
+              p Particuliere donateurs
+          .card-link-item
+            a(href="#").card-link-sm
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="41.143" viewBox="0 0 48 41.143">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_595" data-name="Rectangle 595" width="48" height="41.143" fill="none"/>
+                  </clipPath>
+                </defs>
+                <g id="Group_1317" data-name="Group 1317" transform="translate(0 -0.5)">
+                  <g id="Group_1317-2" data-name="Group 1317" transform="translate(0 0.5)" clip-path="url(#clip-path)">
+                    <path id="Path_302" data-name="Path 302" d="M41.979,42H6.021A6.026,6.026,0,0,1,0,36V6A6,6,0,0,1,5.97,0H20.226a5.157,5.157,0,0,1,3.408,1.389L28.242,6H42.027A6,6,0,0,1,48,12V36a6,6,0,0,1-6.024,6ZM42,24H6V36H42ZM6,6V18H42V12H27.774a5,5,0,0,1-3.408-1.389L19.758,6Z" transform="translate(0 -0.857)" fill-rule="evenodd"/>
+                  </g>
+                </g>
+              </svg>
+              p Zakelijke markt
+
+  section.section.section-customer-slider 
+    .container
+      h2 Wat klanten zeggen
+      hr.hr-small.desktop-visible
+      +customer-slider
+      hr.hr-small.desktop-visible

@@ -1,0 +1,104 @@
+.form-control {
+  display: inline-block;
+  position: relative;
+
+  &.icon-left {
+    .form-icon {
+      left: 0;
+    }
+
+    .input {
+      padding-left: $input-padding-icon-x;
+    }
+  }
+
+  &.icon-right {
+    .form-icon {
+      right: 0;
+    }
+
+    .input {
+      padding-right: $input-padding-icon-x;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 16px;
+
+  .label {
+    display: block;
+  }
+}
+
+.form-icon {
+  position: absolute;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  background: none;
+  border: 0;
+}
+
+.input-wrap {
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 15px;
+  }
+}
+
+.input-wrap input {
+  border: none;
+  border-radius: 5px;
+  min-height: 49px;
+  padding: 10px 12px;
+  font-size: 16px;
+
+  @include tablet {
+    max-width: 310px;
+  }
+
+  @include desktop {
+    max-width: 353px;
+  }
+}
+
+.textarea {
+  border: none;
+  border-radius: 5px;
+  max-height: 275px;
+  min-height: 275px;
+  resize: vertical;
+  margin-bottom: 28px;
+  padding: 10px 12px;
+  font-size: 16px;
+
+  @include laptop {
+    min-height: 167px;
+    max-height: 167px;
+    width: 100%;
+  }
+}
+
+::placeholder {
+  font-size: 16px;
+  font-style: italic;
+  color: #282828;
+}
+
+.textarea-wrap label {
+  display: block;
+  margin-bottom: 15px;
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include laptop {
+    text-align: left;
+  }
+}

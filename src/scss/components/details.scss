@@ -1,0 +1,169 @@
+.details {
+  display: block;
+  width: 100%;
+  padding: 44px 0 77px;
+
+  .row {
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  .col-5 {
+    width: 100%;
+
+    @include desktop {
+      width: 41.66667%;
+      padding-right: 7px;
+    }
+  }
+
+  .col-7 {
+    width: 100%;
+
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      width: 58.33333%;
+      padding-left: 147px;
+    }
+  }
+
+  h1 {
+    margin: 0 0 48px;
+
+    @include desktop {
+      margin: 147px 0 66px;
+    }
+  }
+
+  .text {
+    margin: 0;
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__content {
+    margin: 24px 0 0;
+    padding: 0 0 0 45px;
+
+    @include desktop {
+      margin: 55px 0 0;
+      padding: 0 0 0 78px;
+    }
+  }
+
+  h3 {
+    font-weight: normal;
+    margin: 0 0 32px;
+
+    @include desktop {
+      margin: 0 0 28px;
+    }
+  }
+
+  &__steps {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 16px;
+
+    @include desktop {
+      flex-direction: row;
+      margin: 0 0 20px;
+    }
+  }
+
+  &__number {
+    font-family: $font-primary-bold;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    color: $color-primary;
+    margin: 0 0 12px;
+
+    @include desktop {
+      font-size: 22px;
+      line-height: 30px;
+      margin: 0 38px 0 0;
+    }
+  }
+
+  .link {
+    @include desktop {
+      margin: 48px 0 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 296px;
+    margin: 30px 0;
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (min-width: 520px) {
+      height: 500px;
+    }
+
+    @include desktop {
+      height: auto;
+      margin: 0 0 auto;
+
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  &__wrap {
+    display: block;
+    background-color: rgba($color-primary, 0.1);
+    padding: 40px;
+
+    @include desktop {
+      padding: 74px 70px 95px;
+    }
+  }
+
+  h4 {
+    text-transform: uppercase;
+    margin: 0 0 20px;
+
+    @include desktop {
+      margin: 0 0 50px;
+    }
+  }
+
+  &--verkoop {
+    @include desktop {
+      .details {
+        .link {
+          margin: 12px 0 0;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    padding: 165px 0 117px;
+  }
+}

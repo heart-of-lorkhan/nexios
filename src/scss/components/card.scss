@@ -1,0 +1,175 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 30px #00000029;
+
+  @include desktop {
+    flex-direction: row;
+    border: 0;
+  }
+
+  .card__body {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include laptop {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 60%;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 0;
+
+      @include laptop {
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    color: $text-color;
+
+    @include desktop {
+      font-size: 26px;
+      line-height: 38px;
+    }
+
+    &--name {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $color-secondary;
+      margin: 0 0 8px;
+
+      @include desktop {
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0 0 9px;
+      }
+    }
+
+    &--small {
+      font-size: 15px;
+      line-height: 18px;
+
+      @include desktop {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+
+    @include desktop {
+      width: 100%;
+      padding: 0;
+      max-width: 640px;
+      padding-left: 100px;
+    }
+
+    p:first-child {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 8px;
+      letter-spacing: -0.8px;
+    }
+
+    p:last-child {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 0;
+    }
+
+    .card__logo {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+
+    .card__quote {
+      display: block;
+      position: absolute;
+      top: 29px;
+      left: 26px;
+
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    display: none;
+    height: 64px;
+  }
+
+  &__quote {
+    display: none;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 1;
+    color: $text-color;
+
+    @include laptop {
+      width: 15%;
+      text-align: center;
+      display: block;
+    }
+
+    @include desktop {
+      width: 20%;
+    }
+  }
+
+  &__logo-list {
+    display: none;
+    position: absolute;
+    top: auto;
+    left: 68px;
+    bottom: 0;
+    width: calc(100% - 136px);
+    height: 96px;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__logo-item {
+    display: block;
+    max-height: 100%;
+
+    img.card__logo {
+      position: static;
+      display: block;
+      width: auto;
+      max-height: 100%;
+    }
+  }
+}

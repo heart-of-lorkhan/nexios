@@ -1,0 +1,49 @@
+.contact
+  .row
+    .col
+      h1
+        | Contact
+      p.text
+        | Wij komen graag langs voor vrijblijvend gesprek. Een afspraak kan al op korte termijn worden ingepland. Vul het formulier in, of bel of mail ons voor een afspraak.
+        | 
+        span
+          | ZILTER Makelaardij
+        | Straatnaam 26
+        | 2022 AB Plaatsnaam
+        | 
+        | Bel: 
+        a(href="tel:0622334455")
+          | 06 - 22 33 44 55
+        | 
+        | Mail: 
+        a(href="nathalie@ziltermakelaardij.nl").mail
+          | nathalie@ziltermakelaardij.nl
+        | 
+        | 
+        | KVK: 01020304
+        | BTW nr: NL123456789B01
+    .col
+      form(action="").contact__form
+        label(for="inputVoornaam").label
+          | Voornaam:
+        input(name="inputVoornaam" placeholder="Voornaam:").input#inputVoornaam
+        label(for="inputAchternaam").label
+          | Achternaam:
+        input(name="inputAchternaam" placeholder="Achternaam:").input#inputAchternaam
+        label(for="inputEmail").label
+          | E-mail:
+        input(name="inputEmail" placeholder="E-mail:").input#inputEmail
+        label(for="inputTelefoonnummer").label
+          | Telefoonnummer:
+        input(name="inputTelefoonnummer" placeholder="Telefoonnummer:").input#inputTelefoonnummer
+        label.label.label--desktop
+          | Ik neem contact op over:
+        .contact__checkboxes
+          +checkbox("Taxatie")
+          +checkbox("Aankoop")
+          +checkbox("Verkoop")
+        label(for="textareaOpmerkingen").label
+          | Opmerkingen:
+        textarea(name="textareaOpmerkingen" placeholder="Opmerkingen:").textarea#textareaOpmerkingen
+        button(type="submit").button
+          | Verzenden

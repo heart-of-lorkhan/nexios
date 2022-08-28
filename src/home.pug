@@ -1,0 +1,97 @@
+extends pug/base
+
+prepend vars
+  - title = 'Homepage'
+
+append vars
+  //-
+  
+block content
+  section.background-muted.section.section-intro.section-intro--list
+    .container
+      .row
+        .col-md-6.col-lg-5
+          .section__text
+            .section__text-wrap
+              h2.h2 Hét CRM voor fondsenwerving
+              ul.unordered-list
+                li CRM, formulieren en marketing automation in één
+                li Selectietool voor direct mails en telemarketing
+                li Online leads en donaties
+                li E-mail editor en verzending
+                li 360-graden klantbeeld
+
+              a(href="#").button.button-secondary Meer informatie
+        .col-md-6.col-lg-7
+          .section__image
+            img(src="images/crm.jpg", alt="crm." width="812" height="494")
+  section.section.section-features(style="background-image: url(/images/bridge-wave.png)")
+    .container
+      .row
+        .col-md-7
+          h2 Alleskunner in jouw vakgebied
+          p Jij wilt soepele operationele processen en inzichtelijke data, waardoor je meer inkomsten kunt werven. En dat is precies waar de CRM software van Nexios in voorziet. Met elke maand <span>nieuwe innovaties</span>, een grote <span>gebruiksvriendelijkheid</span> en <span>snelheid</span> is het CRM van Nexios gemáákt voor de ambitieuze fondsenwerver.
+    section.section.section-links
+      .container
+        h3 Kies jouw vakgebied:
+        .card-link-wrap 
+          .card-link-item
+            a(href="private-donators.html").card-link
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="55" viewBox="0 0 48 55">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_594" data-name="Rectangle 594" width="48" height="55" transform="translate(0.125)" fill="none"/>
+                  </clipPath>
+                </defs>
+                <g id="Group_1315" data-name="Group 1315" transform="translate(-0.125)">
+                  <g id="Group_1314" data-name="Group 1314" clip-path="url(#clip-path)">
+                    <path id="Path_301" data-name="Path 301" d="M41.25,17.188A17.188,17.188,0,1,0,12.891,30.25,24.041,24.041,0,0,0,0,51.563a3.438,3.438,0,0,0,6.875,0,17.188,17.188,0,0,1,34.375,0,3.438,3.438,0,0,0,6.875,0A24.045,24.045,0,0,0,35.234,30.25,17.149,17.149,0,0,0,41.25,17.188ZM24.063,27.5A10.313,10.313,0,1,1,34.375,17.188,10.312,10.312,0,0,1,24.063,27.5" fill-rule="evenodd"/>
+                  </g>
+                </g>
+              </svg>
+              p Particuliere donateurs
+          .card-link-item
+            a(href="business-market.html").card-link
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="41.143" viewBox="0 0 48 41.143">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_595" data-name="Rectangle 595" width="48" height="41.143" fill="none"/>
+                  </clipPath>
+                </defs>
+                <g id="Group_1317" data-name="Group 1317" transform="translate(0 -0.5)">
+                  <g id="Group_1317-2" data-name="Group 1317" transform="translate(0 0.5)" clip-path="url(#clip-path)">
+                    <path id="Path_302" data-name="Path 302" d="M41.979,42H6.021A6.026,6.026,0,0,1,0,36V6A6,6,0,0,1,5.97,0H20.226a5.157,5.157,0,0,1,3.408,1.389L28.242,6H42.027A6,6,0,0,1,48,12V36a6,6,0,0,1-6.024,6ZM42,24H6V36H42ZM6,6V18H42V12H27.774a5,5,0,0,1-3.408-1.389L19.758,6Z" transform="translate(0 -0.857)" fill-rule="evenodd"/>
+                  </g>
+                </g>
+              </svg>
+              p Zakelijke markt
+          .card-link-item
+            a(href="online-fundraising.html").card-link 
+              <svg id="Group_1366" data-name="Group 1366" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="45" viewBox="0 0 48 45">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_596" data-name="Rectangle 596" width="48" height="45" fill="none"/>
+                  </clipPath>
+                </defs>
+                <g id="Group_1318" data-name="Group 1318" clip-path="url(#clip-path)">
+                  <path id="Path_303" data-name="Path 303" d="M41.982,36H27.012a3,3,0,0,0,3.03,3h5.94a3,3,0,1,1,.03,6h-24a3,3,0,1,1,0-6h5.9a3,3,0,0,0,3.03-3H6.021A6.024,6.024,0,0,1,0,30V6A6,6,0,0,1,6.024,0H41.97A6.018,6.018,0,0,1,48,6V30.03A6,6,0,0,1,41.982,36m0-30H6.012l.021,24H42.015l-.03-24Z" transform="translate(0 0)" fill-rule="evenodd"/>
+                </g>
+              </svg>
+              p Online fondsenwerving
+    .container.section-reviews
+      .row
+        .col-md-4
+          h2 Wat zeggen onze klanten?
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna venenatis diam porta, vitae feugiat arcu consectetur.
+        .col-md-8
+          +customer-slider-carousel
+  section.section.section-intro.section-intro--blue
+    img(src="/images/nexios-bg.png").section__background
+    .section__container
+      .section__text
+        .section__text-wrap
+          h2.h2 Betrokken van begin tot eind. En daarna.
+          p Verbinding komt terug in onze naam: Nexios, gebaseerd op Nexus, verbinding in het Latijn. We leveren meer dan CRM-software, we gaan een verbinding aan. Want we zijn op ons best als we betrokken zijn bij een klant. We denken mee en stoppen niet totdat alles perfect loopt.
+          a(href="javascript:void(0)").section__button
+            | Meer over Nexios
+    img(src="/images/nexios-logo-bg.png").section__decoration

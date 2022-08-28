@@ -1,0 +1,86 @@
+$checkbox-border-width: 2px;
+
+.checkbox {
+  display: flex;
+  cursor: pointer;
+
+  &:last-child {
+    .checkbox-box {
+      margin: 0;
+    }
+  }
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  ~ .checkbox-box {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: relative;
+      top: 0;
+      flex-shrink: 0;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      margin-right: 12px;
+      overflow: hidden;
+
+      @include desktop {
+        width: 28px;
+        height: 28px;
+        border: none;
+      }
+    }
+  }
+
+  &:checked {
+    ~ .checkbox-box {
+      svg {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.checkbox-box {
+  font-size: 16px;
+  line-height: 21px;
+  white-space: nowrap;
+  margin: 0 0 21px;
+
+  svg {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    display: block;
+    width: 11px;
+    height: 11px;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-duration;
+    z-index: 1;
+  }
+
+  @include desktop {
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0;
+
+    svg {
+      top: 7px;
+      left: 7px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

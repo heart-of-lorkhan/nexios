@@ -1,0 +1,260 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.section-article {
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+  @include laptop {
+    padding-bottom: 60px;
+    background-size: auto;
+    background-position: 50% 100%;
+  }
+
+  @include desktop {
+    background-position: 50% 300px;
+    background-repeat: repeat-x;
+  }
+
+  .recent-blogs {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
+  }
+}
+
+.section__container {
+  background-size: auto 340px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1920px;
+  opacity: 1;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  background-color: $color-gray;
+
+  @include laptop {
+    background-position: right;
+    background-size: 73%;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 480px;
+  }
+
+  @include desktop {
+    background-size: 70%;
+    min-height: auto;
+  }
+}
+
+.section__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 60px;
+
+  @include laptop {
+    justify-content: flex-start;
+    padding-bottom: 0;
+  }
+
+  img {
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px #00000014;
+  }
+}
+
+.section__text {
+  padding-top: 350px;
+
+  @include laptop {
+    max-width: 480px;
+    padding-left: 50px;
+    padding-top: 145px;
+    background: linear-gradient(
+      90deg,
+      rgba(247, 247, 247, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  @include desktop {
+    background: linear-gradient(
+      90deg,
+      rgba(247, 247, 247, 1) 0%,
+      rgba(247, 247, 247, 1) 83%,
+      transparent 100%
+    );
+    padding-top: 150px;
+    padding-left: 180px;
+    min-width: 712px;
+  }
+
+  .button {
+    display: inline-block;
+  }
+
+  span {
+    color: $color-secondary;
+  }
+}
+
+.section__text-wrap {
+  line-height: 24px;
+
+  @include laptop {
+    max-width: 512px;
+  }
+}
+.section__text-wrap .h2 {
+  margin-bottom: 34px;
+  line-height: 32px;
+
+  @include desktop {
+    margin-bottom: 38px;
+    line-height: 55px;
+  }
+}
+
+.section-customer-slider {
+  &.section {
+    padding-top: 30px;
+    padding-bottom: 0;
+
+    @include laptop {
+      padding-top: 60px;
+      padding-bottom: 80px;
+    }
+
+    @include desktop {
+      padding-top: 120px;
+    }
+  }
+
+  @include laptop {
+    background-color: $color-primary;
+  }
+
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+
+    @include laptop {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  h2 {
+    display: none;
+    color: $color-white;
+
+    @include laptop {
+      display: block;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.section-job {
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 100%;
+  overflow: hidden;
+
+  @include desktop {
+    background-size: contain;
+    background-position: 50% 150%;
+  }
+
+  .row > * {
+    &:first-child {
+      order: 2;
+      margin-top: 48px;
+
+      @include laptop {
+        margin-top: 0;
+        order: 1;
+      }
+    }
+
+    &:last-child {
+      order: 1;
+
+      @include laptop {
+        order: 2;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 30px;
+
+    @include laptop {
+      margin-top: 45px;
+    }
+  }
+
+  .slider-thumbs {
+    max-width: 730px;
+    margin: 0 0 22px;
+
+    .section__image img {
+      box-shadow: 0px 0px 50px #00000014;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .slider-thumbs-nav {
+    max-width: 730px;
+    padding: 0;
+    margin: 0;
+
+    .swiper-wrapper {
+      margin: 0 -11px;
+    }
+
+    .swiper-slide {
+      margin: 0 11px !important;
+      box-shadow: 0px 0px 50px #00000014;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  .swiper-pagination-bullets {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
+.section-links {
+  padding-top: 60px;
+
+  h3 {
+    margin-bottom: 34px;
+  }
+}

@@ -1,0 +1,46 @@
+$border-radius: 10px;
+
+.button {
+  display: block;
+  min-width: 137px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  color: $color-white;
+  border: none;
+  transition: $transition-duration;
+  padding: 16px 28px;
+  cursor: pointer;
+  border-radius: $border-radius;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: -0.2px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-white;
+  }
+}
+
+.button-primary {
+  background-color: $color-primary;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+}
+.button-secondary {
+  background-color: $color-secondary;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}

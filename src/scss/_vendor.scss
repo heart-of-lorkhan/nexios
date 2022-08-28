@@ -1,0 +1,34 @@
+@import "../../node_modules/reseter.css/src/scss/reseter.scss";
+
+// Swiper
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/components/navigation/navigation";
+@import "../../node_modules/swiper/components/pagination/pagination";
+@import "../../node_modules/swiper/components/thumbs/thumbs";
+
+// Bootsrap
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+$grid-gutter-width: 30px;
+
+$container-max-widths: (
+  sm: 960px,
+  md: 1200px,
+  lg: 1420px,
+  xl: 1920px,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 1024px,
+  lg: 1500px,
+);
+
+$container-padding-x: 30px;
+
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";

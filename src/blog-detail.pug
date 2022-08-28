@@ -1,0 +1,52 @@
+extends pug/base
+
+prepend vars
+  - title = 'Blog detail'
+
+append vars
+  //-
+  
+block content
+  section.blog-header.background-muted(style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/about-bg.jpg)")
+    .container
+      .row
+        .col-md-7
+          .desktop-visible
+            h1 Titel over een of twee regels, het past allemaal.
+        .col-md-5
+          .blog-header__info.desktop-visible
+            p Geschreven door: Maxim Kapteijns
+            p Gepubliceerd op: 8 maart 2022
+  section.section-article(style="background-image: url(/images/wave-grey.svg)")
+    .container
+      .row
+        .col-md-8
+          article.article
+            .mobile-visible
+              h1 Titel over een of twee regels, het past allemaal.
+            .article__info
+              p Geschreven door: Maxim Kapteijns
+              p Gepubliceerd op: 8 maart 2022
+            h3 Wat betekent dat in de praktijk?
+            h4 Leestijd: 2 minuten
+
+            b Als Nexios zijn we participant van de Stichting Donateursbelangen, waarmee we een eerlijke, open cultuur tussen goede doelen en donateurs ondersteunen. Rekening houden met de wensen en voorkeuren van donateurs en hun privacy staat hierin centraal. Dat klinkt natuurlijk ontzettend logisch, maar wat betekent dit in de praktijk?
+
+            h5 Hoe haal je je donateurs over?
+            p Ga er maar aan staan als fondsenwervende organisatie. Zorgvuldig geworven donateurs hou je het liefst zo goed mogelijk vast. En dat niet alleen. Als iemand één keer sympathie voor jouw goede doel heeft getoond, dan is die persoon misschien welwillend om een volgende campagne of actie ook te ondersteunen. Tegelijkertijd wil je de belangen van de donateur niet uit het oog verliezen. Zo wil je dat donateurs kunnen aangeven hoe ze benaderd willen worden, hoe ze bij voorkeur willen betalen, en wil je dat ze makkelijk verantwoording vanuit het goede doel kunnen vinden. En last but not least, ze moeten eenvoudig hun donateurschap kunnen opzeggen.
+            ul 
+              li a
+              li b 
+              li c
+            q Als je het voorstel per e-mail verstuurt, dan worden de nieuwe overeenkomsten automatisch aan de juiste propositie gekoppeld.
+
+            p Dit zijn geen tegenstrijdige belangen. Als je als fondsenwervende organisatie je processen en informatievoorziening goed op orde hebt, kun je de belangen van de donateur prima behartigen en tegelijkertijd je fondsenwervende doelstelling nastreven. Nexios CRM kan je helpen met het vastleggen van de wensen en voorkeuren van een donateur, zodat je hier rekening mee kunt houden tijdens het uitvoeren van alle fondsenwervende activiteiten.
+        .col-md-3.offset-md-1
+
+          
+          aside.recent-blogs
+            h3 Recente blogs
+            +post-item("images/crm.jpg", "Nieuwe rekening, vertrouwde service", "De meeste vaste giftgevers doneren via automatische incasso. Fijn natuurlijk! Maar wat als een giftgever verandert van bankrekeningnummer?")
+            +post-item("images/crm.jpg", "Nieuwe rekening, vertrouwde service", "De meeste vaste giftgevers doneren via automatische incasso. Fijn natuurlijk! Maar wat als een giftgever verandert van bankrekeningnummer?")
+
+

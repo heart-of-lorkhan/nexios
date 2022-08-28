@@ -1,0 +1,130 @@
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.row {
+    @include desktop {
+      margin-right: -86px;
+      margin-left: -86px;
+    }
+
+    > * {
+      @include desktop {
+        padding-right: 86px;
+        padding-left: 86px;
+      }
+    }
+  }
+}
+
+.post-list__item {
+  margin-bottom: 40px;
+
+  @include desktop {
+    margin-bottom: 70px;
+  }
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0px 0px 20px #dddddd4d;
+  background-color: $color-white;
+
+  @include laptop {
+    width: auto;
+    max-width: 340px;
+  }
+}
+
+.post-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  min-width: 165px;
+  margin-top: auto;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #003746;
+  color: $color-white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+
+  @include laptop {
+    min-width: auto;
+    height: auto;
+    font-size: 14px;
+    background-color: transparent;
+    color: $color-green;
+
+    &:hover {
+      &:after {
+        transform: translateX(2px);
+        transition-duration: $transition-duration;
+        transition-property: transform;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='enable-background:new 0 0 512 512' xml:space='preserve'%3E%3Cpath d='m17.414 10.586-8-8a2 2 0 0 0-2.828 2.828L13.172 12l-6.586 6.586a2 2 0 0 0 2.828 2.828l8-8a2 2 0 0 0 0-2.828z' fill='%23186D68' xmlns='http://www.w3.org/2000/svg' data-name='Chevron'/%3E%3C/svg%3E");
+      width: 20px;
+      height: 16px;
+      background-size: 12px;
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      transition-duration: $transition-duration;
+      transition-property: transform;
+    }
+  }
+}
+
+.post-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+
+  @include laptop {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+.post-item p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2;
+  margin-bottom: 30px;
+  height: 110px;
+  overflow: hidden;
+
+  @include laptop {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+}
+
+.post-item__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: 40px 33px;
+
+  @include laptop {
+    padding: 30px 40px 40px;
+  }
+}
+
+.post-item__image {
+  width: 100%;
+  height: 143px;
+  object-fit: cover;
+}

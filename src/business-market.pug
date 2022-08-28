@@ -1,0 +1,69 @@
+extends pug/base
+
+prepend vars
+  - title = 'Zakelijke markt'
+
+append vars
+  //-
+  
+block content
+  section.section-intro.section-intro--gradient
+    .section__container(style="background-image: url(/images/pexels-proxyclick-visitor-management-system.jpg)")
+      .section__text
+        h2.h2 Zakelijke markt
+        .section__text-wrap
+          p Jij wilt soepele operationele processen en inzichtelijke data, waardoor je meer inkomsten kunt werven. En dat is precies waar de CRM software van Nexios in voorziet. Met elke maand <span>nieuwe innovaties</span>, een grote <span>gebruiksvriendelijkheid</span> en <span>snelheid</span> is het CRM van Nexios gemáákt voor de ambitieuze fondsenwerver.
+  section.section.section-job(style="background-image: url(/images/wave-blue.svg);")
+    .container
+      .row
+        .col-md-6.col-lg-6
+          +product-slider
+        .col-md-5.col-lg-5.offset-md-1
+          h2.h2
+            | Alleskunner in jouw vakgebied
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna venenatis diam porta, vitae feugiat arcu consectetur. Fusce tincidunt semper hendrerit. Nam hendrerit est at tristique dapibus. Curabitur vitae nulla vulputate, molestie lacus vitae, pellentesque lacus.
+          ul.unordered-list
+            li CRM, formulieren en marketing automation in één
+            li Selectietool voor direct mails en telemarketing
+            li Online leads en donaties
+            li E-mail editor en verzending
+            li 360-graden klantbeeld
+    .section-links 
+      .container
+        h3 Ik ben werkzaam in een ander vakgebied, namelijk:
+        .card-link-wrap 
+          .card-link-item
+            a(href="#").card-link-sm
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="55" viewBox="0 0 48 55">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_594" data-name="Rectangle 594" width="48" height="55" transform="translate(0.125)" fill="none"/>
+                  </clipPath>
+                </defs>
+                <g id="Group_1315" data-name="Group 1315" transform="translate(-0.125)">
+                  <g id="Group_1314" data-name="Group 1314" clip-path="url(#clip-path)">
+                    <path id="Path_301" data-name="Path 301" d="M41.25,17.188A17.188,17.188,0,1,0,12.891,30.25,24.041,24.041,0,0,0,0,51.563a3.438,3.438,0,0,0,6.875,0,17.188,17.188,0,0,1,34.375,0,3.438,3.438,0,0,0,6.875,0A24.045,24.045,0,0,0,35.234,30.25,17.149,17.149,0,0,0,41.25,17.188ZM24.063,27.5A10.313,10.313,0,1,1,34.375,17.188,10.312,10.312,0,0,1,24.063,27.5" fill-rule="evenodd"/>
+                  </g>
+                </g>
+              </svg>
+              p Particuliere donateurs
+          .card-link-item
+            a(href="#").card-link-sm
+              <svg id="Group_1366" data-name="Group 1366" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="45" viewBox="0 0 48 45">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_596" data-name="Rectangle 596" width="48" height="45" fill="none"/>
+                  </clipPath>
+                </defs>
+                <g id="Group_1318" data-name="Group 1318" clip-path="url(#clip-path)">
+                  <path id="Path_303" data-name="Path 303" d="M41.982,36H27.012a3,3,0,0,0,3.03,3h5.94a3,3,0,1,1,.03,6h-24a3,3,0,1,1,0-6h5.9a3,3,0,0,0,3.03-3H6.021A6.024,6.024,0,0,1,0,30V6A6,6,0,0,1,6.024,0H41.97A6.018,6.018,0,0,1,48,6V30.03A6,6,0,0,1,41.982,36m0-30H6.012l.021,24H42.015l-.03-24Z" transform="translate(0 0)" fill-rule="evenodd"/>
+                </g>
+              </svg>
+              p Online fondsenwerving
+  section.section.section-customer-slider 
+    .container
+      h2 Wat klanten zeggen
+      hr.hr-small.desktop-visible
+      +customer-slider
+      hr.hr-small.desktop-visible

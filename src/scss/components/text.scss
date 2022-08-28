@@ -1,0 +1,51 @@
+.text {
+  font-size: 16px;
+  line-height: 30px;
+  color: $color-text;
+  white-space: pre-line;
+  padding: 0 0 0 45px;
+  position: relative;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+
+    &.mail {
+      text-decoration: underline;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 25px;
+    height: 3px;
+    background-color: $color-primary;
+    z-index: 1;
+  }
+
+  &--no-decoration {
+    padding: 0;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  @include desktop {
+    font-size: 22px;
+    line-height: 35px;
+    padding: 0 0 0 78px;
+
+    &:before {
+      top: 15px;
+      width: 54px;
+    }
+
+    &--no-decoration {
+      padding: 0;
+    }
+  }
+}

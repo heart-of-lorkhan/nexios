@@ -1,0 +1,105 @@
+.conditions {
+  display: block;
+  width: 100%;
+  background-color: $color-light;
+  padding: 58px 0 61px;
+
+  .container-fluid {
+    padding-left: 75px;
+
+    @include desktop {
+      padding-left: 148px;
+    }
+
+    @include desktop-l {
+      padding-left: 218px;
+    }
+  }
+
+  .row {
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  .col {
+    width: 100%;
+
+    @include desktop {
+      width: 50%;
+
+      &:first-child {
+        padding-right: 64px;
+      }
+
+      &:nth-child(2) {
+        padding-left: 64px;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 202px;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $color-text;
+    margin: 0 0 30px;
+
+    @include tablet {
+      max-width: 100%;
+      font-size: 28px;
+      line-height: 37px;
+      margin: 0 0 70px;
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 30px;
+    color: $color-text;
+    margin: 0 0 35px;
+    padding: 0 0 0 45px;
+    position: relative;
+
+    span {
+      font-weight: 600;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 0;
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: $color-primary;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    @include tablet {
+      font-size: 22px;
+      line-height: 35px;
+      margin: 0 0 34px;
+      padding: 0 0 0 51px;
+
+      span {
+        font-weight: normal;
+      }
+
+      &:before {
+        top: 8px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  @include desktop {
+    padding: 178px 0 215px;
+  }
+}

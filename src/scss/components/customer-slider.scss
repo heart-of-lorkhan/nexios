@@ -1,0 +1,397 @@
+.customer-slider {
+  position: relative;
+  padding-bottom: 60px;
+
+  @include laptop {
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+
+  .card {
+    padding: 30px 30px 40px;
+    background-color: $color-primary;
+
+    @include laptop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    * {
+      color: $color-white;
+    }
+
+    .card__body {
+      p {
+        @include laptop {
+          font-size: 16px;
+          line-height: 1.5;
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+
+        @include desktop {
+          font-size: 28px;
+          line-height: 44px;
+          padding-right: 32px;
+          padding-left: 32px;
+        }
+      }
+
+      .card__quote {
+        @include laptop {
+          display: block;
+        }
+      }
+    }
+
+    .card__logo {
+      height: 34px;
+      display: block;
+
+      @include laptop {
+        height: 44px;
+      }
+    }
+
+    .card__footer {
+      @include laptop {
+        width: 30%;
+        margin: 0 auto;
+        padding: 0 0 0 80px;
+      }
+
+      .card__logo {
+        display: none;
+
+        @include laptop {
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+
+      p:first-of-type {
+        font-weight: 600;
+        letter-spacing: -0.8px;
+        line-height: 1.2;
+      }
+    }
+
+    .card__header {
+      .card__logo {
+        @include laptop {
+          display: none;
+        }
+      }
+      .card__quote {
+        @include laptop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    @include laptop {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 15px;
+    background-color: #f7f7f7;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $color-white;
+    transition: $transition-duration;
+    margin: 0 15px 30px;
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-secondary;
+    }
+  }
+
+  &.swiper-container-horizontal > .swiper-pagination-bullets,
+  &.swiper-container .swiper-pagination-custom,
+  &.swiper-container .swiper-pagination-fraction {
+    bottom: 0;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+
+    @include laptop {
+      display: flex;
+      color: $color-white;
+    }
+  }
+
+  .swiper-button-next {
+    @include laptop {
+      right: -7px;
+    }
+  }
+
+  .swiper-button-prev {
+    @include laptop {
+      left: 54%;
+    }
+
+    @include desktop {
+      left: 62%;
+    }
+  }
+
+  .swiper-button-prev:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.399' height='17.399' viewBox='0 0 17.399 17.399'%3E%3Cpath data-name='Контур 306' d='M8.726 15.278 2.122 8.674l6.552-6.552' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='3'/%3E%3C/svg%3E");
+  }
+
+  .swiper-button-next:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.399' height='17.399' viewBox='0 0 17.399 17.399'%3E%3Cpath data-name='Контур 306' d='M8.726 15.278 2.122 8.674l6.552-6.552' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='3'/%3E%3C/svg%3E");
+  }
+}
+
+.slider-thumbs {
+  overflow: visible;
+
+  @include laptop {
+    overflow: hidden;
+  }
+
+  .swiper-wrapper {
+    padding-bottom: 60px;
+
+    @include laptop {
+      padding-bottom: 0;
+    }
+  }
+
+  .section__image {
+    padding-bottom: 0;
+  }
+
+  .card {
+    padding: 30px 30px 40px;
+    background-color: rgba($color-white, 0.65);
+
+    @include laptop {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      box-shadow: none;
+      padding: 0 0 60px;
+      background-color: transparent;
+    }
+
+    * {
+      color: $color-black;
+    }
+
+    .card__body {
+      @include laptop {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      @include desktop {
+        padding-top: 0;
+        padding-bottom: 50px;
+      }
+    }
+
+    .card__body p {
+      @include laptop {
+        font-size: 26px;
+        line-height: 1.4;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      @include desktop {
+        padding-right: 0;
+        padding-left: 15px;
+      }
+    }
+
+    .card__logo {
+      height: 34px;
+      display: block;
+
+      @include laptop {
+        height: 44px;
+        margin: 0 auto;
+      }
+    }
+
+    .card__footer {
+      @include laptop {
+        padding-right: 30px;
+        padding-left: 0;
+      }
+
+      @include desktop {
+        width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      p:first-child {
+        color: $color-secondary;
+
+        @include laptop {
+          font-size: 20px;
+        }
+      }
+
+      p:last-child {
+        @include laptop {
+          font-size: 20px;
+          line-height: 1.4;
+          letter-spacing: -1px;
+        }
+      }
+
+      .card__logo {
+        @include laptop {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .card__header {
+      .card__logo {
+        @include laptop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 15px;
+    background-color: #f7f7f7;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $color-white;
+    transition: $transition-duration;
+    margin: 0 15px 30px;
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-blue;
+    }
+  }
+
+  &.swiper-container-horizontal > .swiper-pagination-bullets,
+  &.swiper-container .swiper-pagination-custom,
+  &.swiper-container .swiper-pagination-fraction {
+    bottom: 0;
+  }
+
+  .slider-thumbs-pagination {
+    text-align: center;
+
+    @include laptop {
+      display: none;
+    }
+  }
+}
+
+.slider-thumbs-nav {
+  display: none;
+
+  @include laptop {
+    display: block;
+    margin: 0 40px;
+    padding: 0 40px;
+  }
+
+  @include desktop {
+    margin: 0;
+  }
+
+  .card__logo {
+    display: block;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    max-width: 115px;
+
+    @include laptop {
+      max-width: 80px;
+    }
+
+    @include desktop {
+      max-width: 115px;
+    }
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  font-size: 15px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  font-weight: 700;
+  color: #282828;
+}
+
+.swiper-button-prev:after {
+  content: "";
+  width: 14px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.399' height='17.399' viewBox='0 0 17.399 17.399'%3E%3Cpath d='M8.726 15.278 2.122 8.674l6.552-6.552' fill='none' stroke='%23282828' stroke-linecap='round' stroke-width='3'/%3E%3C/svg%3E");
+}
+
+.swiper-button-next:after {
+  content: "";
+  width: 14px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.399' height='17.399' viewBox='0 0 17.399 17.399'%3E%3Cpath d='M8.726 15.278 2.122 8.674l6.552-6.552' fill='none' stroke='%23282828' stroke-linecap='round' stroke-width='3'/%3E%3C/svg%3E");
+  transform: rotate(180deg);
+}
+
+.blogs-slider {
+  .post-item {
+    height: 100%;
+
+    @include laptop {
+      max-width: 320px;
+    }
+  }
+}
+
+.swiper-slide {
+  height: auto;
+
+  @include laptop {
+    height: 100%;
+  }
+
+  .card {
+    height: 90%;
+
+    @include laptop {
+      height: auto;
+    }
+  }
+}

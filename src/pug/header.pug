@@ -1,0 +1,44 @@
+header.header
+  .header__container
+    .header__inner
+      a.header__logo(href="/")
+        img.logo(src="images/logo.svg" alt="Nexios logo." width="219" height="56")
+
+      .header__menu
+
+        +navbar(
+          [
+            {
+              text: "Home",
+              link: "/home.html",
+              active: "active"
+            },
+            {
+              text: "Particuliere donateurs", 
+              link: "/private-donators.html",
+            },
+            {
+              text: "Zakelijke markt", 
+              link: "/business-market.html",
+            },
+            {
+              text: "Online fondsenwerving", 
+              link: "/online-fundraising.html",
+            },
+            {
+              text: "Over Nexios", 
+              link: "/about.html",
+            },
+          ]
+        )
+        a(href="#").button.button-primary Contact
+    .header__menu-toggle
+      button.hamburger.js-toggle-menu(type="button")
+        .hamburger-icon
+          .line
+          .line
+          .line
+        .hamburger-text-opened
+          | sluiten
+        .hamburger-text-closed
+          | menu

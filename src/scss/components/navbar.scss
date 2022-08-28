@@ -1,0 +1,60 @@
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include laptop {
+    flex-direction: row;
+  }
+}
+
+.navbar__list a {
+  text-decoration: none;
+  color: $text-color;
+  font-weight: $font-weight-bold;
+  font-size: 20px;
+  transition-duration: $transition-duration;
+  transition-property: color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-secondary;
+    transition-duration: $transition-duration;
+    transition-property: color;
+  }
+
+  @include laptop {
+    font-size: 16px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.navbar__list li {
+  margin-bottom: 56px;
+
+  &.current-menu-item a {
+    color: $color-secondary;
+  }
+
+  @include laptop {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    margin-right: 70px;
+  }
+}
+
+.navbar__list li:last-child {
+  margin-bottom: 40px;
+
+  @include laptop {
+    margin-bottom: 0;
+  }
+}

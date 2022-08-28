@@ -1,0 +1,12 @@
+.section-features {
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: cover;
+
+  @include desktop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-size: contain;
+    background-position: 50% 100%;
+  }
+}

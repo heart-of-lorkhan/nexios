@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  &.mobile-menu-active {
+    overflow: hidden;
+  }
+}
+
+html {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+
+  &.is-lock-scroll,
+  &.is-lock-scroll body {
+    overflow: hidden;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-decoration-skip: objects;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: $font-primary;
+}
+
+main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  background-color: $color-white;
+}
+
+svg {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[draggable="false"] {
+  pointer-events: none;
+  // stylelint-disable-next-line
+  -webkit-user-drag: none;
+}
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+iframe {
+  display: block;
+}
+
+.js-lazy-load:not(.is-loaded) {
+  max-height: 50vh;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // fallback
+  // stylelint-disable-next-line
+  min-height: var(--vh);
+}
+
+hr {
+  width: 100%;
+  height: 3px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 0;
+
+  @include laptop {
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+}
+
+.hr-small {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}

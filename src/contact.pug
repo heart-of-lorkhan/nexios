@@ -1,0 +1,41 @@
+extends pug/base
+
+prepend vars
+  - title = 'Contact'
+
+append vars
+  //-
+  
+block content
+  section.section.section-contact.background-muted
+    .container 
+      .row 
+        .col-md-5 
+          h2.h2 Je wilt verandering. Wij kunnen helpen. <span>Praatje maken?</span>
+          h4.h4 Vul het formulier in en wij nemen contact met je op.
+          p.desktop-visible Nexios heeft de door jou verstrekte contactgegevens nodig om contact met je op te nemen over onze producten en diensten. Wij verstrekken deze gegevens niet aan derden. Beloofd!
+        .col-md-7 
+          form.contact-form(action="")
+            .row 
+              .col-md-6 
+                .input-wrap
+                  label(for="name") Voornaam:
+                  input#name(type="name")
+              .col-md-6 
+                .input-wrap
+                  label(for="name") Achternaam:
+                  input#name(type="name")
+              .col-md-6 
+                .input-wrap
+                  label(for="name") E-mailadres: *
+                  input#name(type="email")
+                .input-wrap
+                  label(for="name") Telefoonnummer:
+                  input#name(type="tel")
+              .col-md-6 
+                .textarea-wrap
+                  label(for="textarea") Jouw bericht: *
+                  textarea.textarea#textarea(cols="30" rows="10" placeholder="Met welke uitdaging kunnen wij je helpen?")
+              .col-md-6 
+                button.button.button-primary(type="submit") Verzenden
+                p.mobile-visible Nexios heeft de door jou verstrekte contactgegevens nodig om contact met je op te nemen over onze producten en diensten. Wij verstrekken deze gegevens niet aan derden. Beloofd!

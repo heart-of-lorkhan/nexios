@@ -1,0 +1,40 @@
+// $container-padding-xs: 35px;
+// $container-padding-desktop: 50px;
+// $container-padding-desktop-l: 70px;
+
+// @mixin makeContainer() {
+//   margin-right: auto;
+//   margin-left: auto;
+//   width: 100%;
+//   padding-right: $container-padding-xs;
+//   padding-left: $container-padding-xs;
+
+//   @include desktop {
+//     padding-right: $container-padding-desktop;
+//     padding-left: $container-padding-desktop;
+//   }
+
+//   @include desktop-l {
+//     padding-right: $container-padding-desktop-l;
+//     padding-left: $container-padding-desktop-l;
+//   }
+// }
+
+// .container {
+//   @include makeContainer;
+// }
+
+// .container-fluid {
+//   padding-left: $container-padding-xs;
+//   padding-right: $container-padding-xs;
+
+//   @include desktop {
+//     padding-left: $container-padding-desktop;
+//     padding-right: $container-padding-desktop;
+//   }
+
+//   @include desktop-l {
+//     padding-left: $container-padding-desktop-l;
+//     padding-right: $container-padding-desktop-l;
+//   }
+// }

@@ -1,0 +1,137 @@
+.contact-form {
+  @include laptop {
+    padding-top: 14px;
+  }
+}
+
+.contact-form input {
+  margin-bottom: 33px;
+  width: 100%;
+
+  @include tablet {
+    margin: 0 auto 33px;
+    max-width: 500px;
+  }
+  @include laptop {
+    width: 100%;
+  }
+}
+
+.contact-form label {
+  font-size: 15px;
+  text-align: left;
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include laptop {
+    font-size: 18px;
+    margin: 0 0 10px;
+    text-align: left;
+  }
+}
+.section-contact p {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 24px;
+  @include laptop {
+    font-size: 14px;
+    line-height: 26px;
+    max-width: 455px;
+  }
+}
+
+.contact-form .textarea {
+  width: 100%;
+  @include tablet {
+    display: block;
+    margin: 0 auto 45px;
+    width: 500px;
+  }
+
+  @include laptop {
+    display: inline;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+  }
+}
+
+.section-contact {
+  padding: 74px 0;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+
+  @include laptop {
+    padding: 160px 5px 163px;
+  }
+}
+
+.section-contact .col-md-7 {
+  @include laptop {
+    padding-left: 68px;
+  }
+}
+
+.section-contact button {
+  width: 100%;
+  padding: 16px 67px;
+  margin-bottom: 35px;
+
+  @include tablet {
+    max-width: 500px;
+    margin: 0 auto 35px;
+  }
+
+  @include laptop {
+    width: auto;
+    padding: 16px 37px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  @include desktop {
+    margin: 0 auto 0 0;
+    width: 50%;
+  }
+}
+
+.section-contact .h2 {
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 30px;
+  text-align: left;
+
+  @include tablet {
+    text-align: center;
+  }
+  @include laptop {
+    font-size: 30px;
+    text-align: left;
+  }
+  @include desktop {
+    font-size: 45px;
+    line-height: 55px;
+    margin-bottom: 58px;
+  }
+}
+
+.section-contact .h4 {
+  margin-bottom: 55px;
+  text-align: left;
+  @include tablet {
+    text-align: center;
+  }
+  @include laptop {
+    margin-bottom: 45px;
+    max-width: 270px;
+    text-align: left;
+  }
+}
+
+.section-contact span {
+  color: $color-secondary;
+}

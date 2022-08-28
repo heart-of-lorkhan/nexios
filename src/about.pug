@@ -1,0 +1,43 @@
+extends pug/base
+
+prepend vars
+  - title = 'About'
+
+append vars
+  //-
+  
+block content
+  section.section-intro.section-intro--cover
+    .section__container(style="background-image: linear-gradient(to right, rgba(0, 81, 103, 0.6) 0%, #00759400 100%), url(/images/about-bg.jpg)")
+      .section__text
+        .section__text-wrap
+          h2 Betrokken van begin tot eind. En daarna.
+          p Verbinding komt terug in onze naam: Nexios, gebaseerd op Nexus, verbinding in het Latijn. We leveren meer dan CRM-software, we gaan een verbinding aan. Want we zijn op ons best als we betrokken zijn bij een klant. We denken mee en stoppen niet totdat alles perfect loopt.
+  section.section.section-team(style="background-image: url(/images/wave-grey.svg)")
+    .container
+      ul.section-team__photos
+        li 
+          img(src="http://placekitten.com/359/308" alt="alt." width="359" height="308")
+        li 
+          img(src="http://placekitten.com/359/308" alt="alt." width="359" height="308")
+        li 
+          img(src="http://placekitten.com/359/308" alt="alt." width="359" height="308")
+        li 
+          img(src="http://placekitten.com/359/308" alt="alt." width="359" height="308")
+      .section-team__info.section-team__info--photos
+        h2 Ons team staat voor je klaar
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna venenatis diam porta, vitae feugiat arcu consectetur. Fusce tincidunt semper hendrerit. Nam hendrerit est at tristique dapibus. Curabitur vitae nulla vulputate, molestie lacus vitae, pellentesque lacus.
+      hr
+      .section-team__blogs
+        .swiper-container.blogs-slider
+          .swiper-wrapper
+            .swiper-slide
+              +post-item("images/crm.jpg", "Nieuwe rekening, vertrouwde service service service", "De meeste vaste giftgevers doneren via automatische incasso. Fijn natuurlijk! Maar wat als een giftgever verandert van bankrekeningnummer?")
+            .swiper-slide
+              +post-item("images/crm.jpg", "Nieuwe rekening, vertrouwde service", "De meeste vaste giftgevers doneren via automatische incasso. Fijn natuurlijk! Maar wat als een giftgever verandert van bankrekeningnummer?")
+          .swiper-pagination
+        a(href="#").section-team__blogs-more.button.button-secondary.mobile-visible Meer blogs
+      .section-team__info
+        h2 Blogs. Om te lezen.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna venenatis diam porta, vitae feugiat arcu consectetur. Fusce tincidunt semper hendrerit.
+        a(href="#").button.button-primary.desktop-visible Meer blogs
